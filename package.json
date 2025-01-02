@@ -1,0 +1,14 @@
+{
+  "name": "rolldown-export-demo",
+  "version": "0.0.1",
+  "main": "./dist/start.js",
+  "scripts": {
+    "build": "(rm -r dist || true) && RD_LOG=error rolldown -c ./rolldown.config.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "rolldown": "^1.0.0-beta.1"
+  }
+}
