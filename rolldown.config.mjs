@@ -1,10 +1,13 @@
-import { defineConfig } from "rolldown";
+import {defineConfig} from "rolldown";
 
 export default defineConfig({
-  input: ["./src/start.ts", "./src/end.ts"],
-  platform: "node",
-  output: {
-    format: "cjs",
-    dir: "dist",
-  },
+	input: ["src/test.ts"],
+	platform: "node",
+	define: {
+		"NO_THREAD_ASSERTIONS": "true",
+	},
+	external: "../random/SecureRandom.js",
+	output: {
+		dir: "dist/rolldown",
+	},
 });
